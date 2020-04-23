@@ -1,10 +1,10 @@
 function animalSort(arr) {
-  const sortedByLegs = arr.sort(function (a, b) {
-    if (a.numberOfLegs !== b.numberOfLegs) {
-      return a.numberOfLegs - b.numberOfLegs;
-    } else if (a.numberOfLegs === b.numberOfLegs) {
-      let aAnimalName = a.name.toLowerCase();
-      let bAnimalName = b.name.toLowerCase();
+  const sortedByLegs = arr.sort(function (animalA, animalB) {
+    if (animalA.numberOfLegs !== animalB.numberOfLegs) {
+      return animalA.numberOfLegs - animalB.numberOfLegs;
+    } else if (animalA.numberOfLegs === animalB.numberOfLegs) {
+      let aAnimalName = animalA.name.toLowerCase();
+      let bAnimalName = animalB.name.toLowerCase();
       return aAnimalName < bAnimalName ? -1 : aAnimalName > bAnimalName ? 1 : 0;
     }
   });
