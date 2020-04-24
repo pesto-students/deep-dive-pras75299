@@ -1,12 +1,12 @@
-function updateObject(index, valueToReplace, arr) {
+function updateObject(index, replacementValue, arr) {
   const arrayToUpdate = arr;
 
   if (arrayToUpdate.length < 1) {
-    arrayToUpdate.push(valueToReplace);
+    arrayToUpdate.push(replacementValue);
   } else if (index < 0) {
-    arrayToUpdate[arrayToUpdate.length - 1] = valueToReplace;
+    arrayToUpdate[arrayToUpdate.length - 1] = replacementValue;
   } else {
-    arrayToUpdate[index] = valueToReplace;
+    arrayToUpdate[index] = replacementValue;
   }
 
   return arrayToUpdate;
