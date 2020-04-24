@@ -1,5 +1,5 @@
 function updateObject(index, replacementValue, arr) {
-  const arrayToUpdate = arr;
+  const arrayToUpdate = [...arr];
 
   if (arrayToUpdate.length < 1) {
     arrayToUpdate.push(replacementValue);
