@@ -17,5 +17,8 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "pesto-exercise-starter": "^1.0.1"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5"
   }
 }
