@@ -1,5 +1,5 @@
-function animalSort(arr) {
-  const sortedByLegs = arr.sort(function (animalA, animalB) {
+function animalSort(animalsArr) {
+  const sortedByLegs = animalsArr.sort(function (animalA, animalB) {
     if (animalA.numberOfLegs !== animalB.numberOfLegs) {
       return animalA.numberOfLegs - animalB.numberOfLegs;
     } else if (animalA.numberOfLegs === animalB.numberOfLegs) {
