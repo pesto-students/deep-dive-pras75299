@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Modal.css";
 
@@ -6,7 +6,7 @@ const propTypes = {
   id: PropTypes.string.isRequired,
 };
 
-class Modal extends React.Component {
+class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
@@ -60,7 +60,6 @@ class Modal extends React.Component {
         ref={(el) => (this.element = el)}
       >
         <div className="modal">
-          <div className="modal-header"></div>
           <div className="modal-body">{this.props.children}</div>
         </div>
         <div className="modal-background"></div>

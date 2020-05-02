@@ -15,7 +15,21 @@
   width: 50%;
   position: relative;
 }
-.modal-body .modal-header a {
+
+.modal-header {
+  width: 100%;
+  background-color: #dddddd;
+  border-bottom: #444 solid 1px;
+  margin-bottom: 12px;
+  padding: 20px;
+}
+.modal-header h1 {
+  font-size: 22px;
+  color: #444;
+  text-align: left;
+}
+
+.modal-header a {
   background: transparent;
   border: none;
   color: #000;
