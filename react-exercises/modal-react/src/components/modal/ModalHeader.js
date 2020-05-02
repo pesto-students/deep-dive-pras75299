@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const ModalHeader = (props) => {
   return <div className="modal-header">{props.children}</div>;

@@ -18,14 +18,12 @@ class Modal extends Component {
     e.preventDefault();
     let modal = Modal.modals.find((x) => x.props.id === id);
     modal.setState({ isOpen: true });
-    document.body.classList.add("modal-open");
   };
 
   static close = (id) => (e) => {
     e.preventDefault();
     let modal = Modal.modals.find((x) => x.props.id === id);
     modal.setState({ isOpen: false });
-    document.body.classList.remove("modal-open");
   };
 
   componentDidMount() {
@@ -51,6 +49,11 @@ class Modal extends Component {
       Modal.close(this.props.id)(e);
     }
   };
+  bgClick = (e) => {
+    if (e.target.className === "modal-background") {
+      Modal.close(this.props.id)(e);
+    }
+  };
 
   render() {
     return (
@@ -59,10 +62,8 @@ class Modal extends Component {
         onClick={this.handleClick}
         ref={(el) => (this.element = el)}
       >
-        <div className="modal">
-          <div className="modal-body">{this.props.children}</div>
-        </div>
-        <div className="modal-background"></div>
+        <div className="modal">{this.props.children}</div>
+        <div className="modal-background" onClick={this.bgClick}></div>
       </div>
     );
   }

@@ -31,7 +31,7 @@
 }
 
 .innerhome {
-  width: 50%;
+  width: 100%;
   margin: 50px auto 0 auto;
   background-color: #fff;
   color: #000;
@@ -103,8 +103,8 @@ button.btn-default {
 
 @media (max-width: 768px) {
   .innerhome {
-    width: 85%;
-    margin: 5% auto 2% auto;
+    width: 100%;
+    margin: 2% auto 2% auto;
     padding: 15px;
   }
 }
