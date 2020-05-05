@@ -28,13 +28,13 @@ class Modal extends Component {
 
   componentDidMount() {
     document.body.appendChild(this.element);
-    document.addEventListener("keydown", this.onEscClick, false);
+    document.addEventListener("keydown", this.onEscClick);
     Modal.modals.push(this);
   }
 
   componentWillUnmount() {
     Modal.modals = Modal.modals.filter((x) => x.props.id !== this.props.id);
-    document.removeEventListener("keydown", this.onEscClick, false);
+    document.removeEventListener("keydown", this.onEscClick);
     this.element.remove();
   }
 
@@ -49,7 +49,7 @@ class Modal extends Component {
       Modal.close(this.props.id)(e);
     }
   };
-  bgClick = (e) => {
+  overlayClick = (e) => {
     if (e.target.className === "modal-background") {
       Modal.close(this.props.id)(e);
     }
@@ -63,7 +63,7 @@ class Modal extends Component {
         ref={(el) => (this.element = el)}
       >
         <div className="modal">{this.props.children}</div>
-        <div className="modal-background" onClick={this.bgClick}></div>
+        <div className="modal-background" onClick={this.overlayClick}></div>
       </div>
     );
   }
