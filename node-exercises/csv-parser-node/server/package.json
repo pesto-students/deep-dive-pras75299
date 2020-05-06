@@ -1,0 +1,19 @@
+{
+  "name": "csv-parser-server",
+  "version": "0.1.0",
+  "description": "Server module of CSV parser project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "author": "Prashant Kumar Singh, Soumendu Prasad Sinha",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0"
+  }
+}

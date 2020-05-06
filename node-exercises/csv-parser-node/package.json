@@ -4,16 +4,14 @@
   "description": "Package which converts CSV text input into arrays or objects.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "server:install": "cd server && npm install",
+    "server:test": "cd server && npm run test",
+    "server:start": "cd server && npm run start",
+    "install-all": "npm install && npm run server:install"
   },
   "author": "Prashant Kumar Singh, Soumendu Prasad Sinha",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "babel-jest": "^25.1.0",
-    "jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -33,10 +31,6 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint",
-      "prettier --write"
-    ],
-    "*.jsx": [
       "eslint",
       "prettier --write"
     ]
