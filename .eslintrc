@@ -5,6 +5,7 @@
     "jest": true
   },
   "rules": {
+    "no-restricted-syntax": 0,
     "prettier/prettier": ["error"]
   }
 }
