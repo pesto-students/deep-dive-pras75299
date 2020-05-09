@@ -4,7 +4,7 @@
   "description": "Server module of CSV parser project",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "node index.js"
   },
   "author": "Prashant Kumar Singh, Soumendu Prasad Sinha",
