@@ -1,22 +1,24 @@
-const stream = require('stream');
-const { chunkToLines } = require('../src/csv-to-json.transformers');
+const { getOutputPath } = require('../src/csv-to-json');
 
-describe('CSV-TO-JSON: linefeed detection test', () => {
-  test('Normal linefeed test', async () => {
-    const csvString = `A,A100100,2000,96,130
-A,A100200,2000,198,110`;
-    const correctResult = `A,A100100,2000,96,130
-A,A100200,2000,198,110`;
+describe('CSV-TO-JSON', () => {
+  describe('Output path generation Test', () => {
+    test('Error Path Test', async () => {
+      expect(getOutputPath('data/test1.csv').error).toBe(
+        'data/output/test1-errors.txt'
+      );
 
-    const readStream = stream.Readable.from(csvString, {
-      encoding: 'utf8',
+      expect(getOutputPath('data/test1').error).toBe(
+        'data/output/test1-errors.txt'
+      );
     });
 
-    let result = '';
-
-    for await (const line of chunkToLines(readStream)) {
-      result += line;
-    }
-    expect(result).toEqual(correctResult);
+    test('Json Path Test', async () => {
+      expect(getOutputPath('data/test1.csv').json).toBe(
+        'data/output/test1-output.json'
+      );
+      expect(getOutputPath('data/test1').json).toBe(
+        'data/output/test1-output.json'
+      );
+    });
   });
 });

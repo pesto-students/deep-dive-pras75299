@@ -1,0 +1,12 @@
+field_1,field_2,field_3
+aaa,bbb,ccc
+xxx,yyy,zzz,
+aaa ,  bbb , ccc
+ xxx, yyy  ,zzz 
+aaa,"b
+bb",ccc
+xxx,"y, yy",zzz
+aaa,"b""bb",ccc
+xxx,  "y, yy" ,zzz
+111,222,333,invalid
+xxx,yyy,zzz

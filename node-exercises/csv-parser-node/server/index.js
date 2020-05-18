@@ -1,7 +1,10 @@
-const server = require('http').createServer();
+const { csvToJson } = require('./src/csv-to-json');
+const { jsonToCsv } = require('./src/json-to-csv');
 
-server.on('request', (req, res) => {
-  res.end('Hello World\n');
-});
-process.stdout.write('Server listening to localhost:8000');
-server.listen(8000);
+const parser = { csvToJson, jsonToCsv };
+
+// parser.csvToJson('data/test1.csv', { headers: true, delimiters: [','] });
+parser.csvToJson('data/bigFile.csv', { headers: true, delimiter: [','] });
+// parser.csvToJson('data/sample1.csv', { headers: true, delimiters: [','] });
+
+module.exports = parser;
